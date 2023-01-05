@@ -4,9 +4,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.window import Window
 from pyspark.ml.recommendation import ALS
 from pyspark.ml.evaluation import RegressionEvaluator
-from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
 from pyspark.sql.types import *
 from pyspark.sql import functions as F
+from pyspark2pmml import PMMLBuilder
 sys.path.append('.\src')
 from shared.load import load_ratings
 
@@ -110,7 +110,10 @@ def run_job(spark, config):
     print("The RMSE on the average set is {0}".format(test_avg_RMSE))
 
     # Save model
-    best_model.write().overwrite().save(config.get("MODEL_PATH"))
+    # best_model.write().overwrite().save(config.get("MODEL_PATH"))
+
+    pmmlBuilder = PMMLBuilder(spark, test_df, best_model)
+    pmmlBuilder.buildFile("fk.pmml")
 
     return
 

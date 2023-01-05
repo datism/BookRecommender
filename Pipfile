@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pyspark = "*"
+numpy = "*"
+pyspark2pmml = "*"
 
 [dev-packages]
 
