@@ -5,6 +5,7 @@ from pyspark.ml.recommendation import ALS
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.sql.types import *
 from pyspark.sql import functions as F
+from pyspark2pmml import PMMLBuilder
 sys.path.append('.\src')
 from shared.load import load_ratings
 
@@ -117,6 +118,8 @@ def run_job(spark, config):
 
 # with open("./src/config.json", "r") as config_file:
 #     config = json.load(config_file)
+
+# spark = SparkSession.builder.appName(config.get("APP_NAME")).getOrCreate()
 
 # spark = SparkSession.builder.appName(config.get("APP_NAME")).getOrCreate()
 
