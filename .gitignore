@@ -9,3 +9,4 @@ venv/*
 loaded_data/*
 derby.log
 .DS_Store
+.ipynb_checkpoints/

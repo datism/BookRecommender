@@ -87,4 +87,19 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
+    
+  # pyspark-notebook:
+  #   image: jupyter/pyspark-notebook
+  #   container_name: pyspark-notebook
+  #   ports:
+  #     - "8888:8888"
+  #   networks:
+  #     - host
+  #   volumes:
+  #     - ./src/:/home/jovyan/work/src/
+  #   environment:
+  #     - SPARK_MASTER=spark://spark-master:7077
+
+
+
 
