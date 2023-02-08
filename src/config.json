@@ -1,5 +1,0 @@
-{
-    "APP_NAME": "BookRecommender",
-    "DATA_PATH": "hdfs://namenode:9000/user/nhom7/book/data/",
-    "MODEL_PATH": "hdfs://namenode:9000/user/nhom7/book/als_model"
-}
