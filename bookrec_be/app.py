@@ -57,4 +57,3 @@ def getBooks(user):
         rec_books_df = bookDf[bookDf["ISBN"].isin(sorted_rec_books)]
 
     return json.loads(rec_books_df.to_json(orient="records"))
-
