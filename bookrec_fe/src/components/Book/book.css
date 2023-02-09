@@ -1,0 +1,20 @@
+.book-container {
+  background-color: #eee;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+.book-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.book-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+img {
+  width: 200px;
+}
